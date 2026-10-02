@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071426" />
+  <meta
+    name="description"
+    content="Contact CromMind about a digital product, website, software project, or ICT Academy enquiry."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact CromMind" />
+  <meta
+    property="og:description"
+    content="Tell CromMind about a digital project or ask about the ICT Academy."
+  />
+  <title>Contact CromMind | Projects &amp; Academy Enquiries</title>
+  <link rel="icon" href="./official website/images/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="icon" href="./official website/images/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="./official website/images/favicon.ico" type="image/x-icon" sizes="any" />
+  <link rel="apple-touch-icon" href="./official website/images/apple-touch-icon.png" sizes="180x180" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./official website/styles/landing.css" />
+  <link rel="stylesheet" href="./official website/styles/contact.css" />
+</head>
+<body class="contact-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="landing-header" id="top">
+    <div class="landing-shell nav-shell">
+      <a class="brand" href="./index.html#top" aria-label="CromMind home">
+        <img class="brand__mark" src="./official website/images/android-chrome-512x512.png" alt="" width="512" height="512" />
+        <img class="brand__wordmark" src="./official website/images/CromMind_Wordmark_Transparent.png" alt="" width="1222" height="206" />
+      </a>
+
+      <button
+        class="menu-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Primary navigation">
+        <a href="./index.html#top">Home</a>
+        <a href="./services.html">Services</a>
+        <a href="./index.html#academy">ICT Academy</a>
+        <a href="./contact.html" class="is-active" aria-current="page">Contact</a>
+        <a class="nav__cta nav__cta--project" href="#enquiry-form">Start a Project</a>
+        <a class="nav__cta nav__cta--academy" href="./index.html#academy">Join the Academy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="contact-main contact-shell" aria-labelledby="contact-title">
+      <div class="contact-intro">
+        <p class="contact-eyebrow">A conversation starts here</p>
+        <h1 id="contact-title">What are you looking to make possible?</h1>
+        <p class="contact-intro__summary">
+          Tell us about a digital project, or send a question about the CromMind ICT Academy. A clear first conversation can start with a rough idea.
+        </p>
+
+        <div class="contact-paths" aria-label="Choose the kind of enquiry">
+          <a class="contact-path" href="./services.html">
+            <span class="contact-path__label">For businesses</span>
+            <span class="contact-path__title">Planning a digital product?</span>
+            <span class="contact-path__action">Explore services <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="contact-path" href="./index.html#academy">
+            <span class="contact-path__label">For learners</span>
+            <span class="contact-path__title">Interested in learning?</span>
+            <span class="contact-path__action">Visit the Academy <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-panel">
+        <div class="contact-form-panel__heading">
+          <p class="contact-eyebrow">Enquiry form</p>
+          <h2>Tell us a little about it.</h2>
+          <p>Fields marked <span aria-hidden="true">*</span> are required.</p>
+        </div>
+        
+        <form
+            class="contact-form"
+            id="enquiry-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST">
+          <div class="contact-form__fields">
+            <div class="contact-field">
+              <label for="contact-name">Your name <span aria-hidden="true">*</span></label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="contact-field">
+              <label for="contact-email">Email address <span aria-hidden="true">*</span></label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="contact-field contact-field--wide">
+              <label for="contact-topic">What would you like to discuss? <span aria-hidden="true">*</span></label>
+              <select id="contact-topic" name="topic" required>
+                <option value="" selected disabled>Select an enquiry type</option>
+                <option value="digital-project">A digital project</option>
+                <option value="academy">The ICT Academy</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="contact-field contact-field--wide">
+              <label for="contact-message">A little about what you need <span aria-hidden="true">*</span></label>
+              <textarea id="contact-message" name="message" rows="5" required></textarea>
+            </div>
+          </div>
+
+          <button class="contact-form__submit" type="submit">Send enquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-note" aria-label="Looking for digital services">
+      <div class="contact-shell contact-note__inner">
+        <p>Still shaping the idea?</p>
+        <a href="./services.html">See how CromMind approaches digital projects <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner landing-shell">
+      <div class="site-footer__main">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="./index.html#top" aria-label="CromMind home">
+            <img
+              src="./official website/images/CromMind_Wordmark_Transparent.png"
+              alt=""
+              width="1222"
+              height="206"
+              loading="lazy"
+            />
+          </a>
+          <h2 id="footer-title">Building digital products. Teaching practical tech skills.</h2>
+          <p>One studio for businesses shaping what comes next, and learners ready to build their digital future.</p>
+        </div>
+
+        <div class="site-footer__pathways">
+          <section class="site-footer__pathway" aria-labelledby="footer-business-title">
+            <p class="site-footer__eyebrow">For businesses</p>
+            <h3 id="footer-business-title">Bring your digital idea to life.</h3>
+            <a class="site-footer__link" href="./services.html">Explore our services <span aria-hidden="true">&rarr;</span></a>
+            <a class="site-footer__link" href="#enquiry-form">Send an enquiry <span aria-hidden="true">&uarr;</span></a>
+          </section>
+          <section class="site-footer__pathway" aria-labelledby="footer-academy-title">
+            <p class="site-footer__eyebrow">For learners</p>
+            <h3 id="footer-academy-title">Find your next skill to build.</h3>
+            <a class="site-footer__link" href="./index.html#academy">Explore the ICT Academy <span aria-hidden="true">&rarr;</span></a>
+          </section>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 CromMind. All rights reserved.</p>
+        <nav aria-label="Footer links">
+          <a href="./privacy-policy.html">Privacy policy</a>
+          <a href="./terms-of-service.html">Terms of service</a>
+          <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="./official website/scripts/navigation.js" defer></script>
+</body>
+</html>

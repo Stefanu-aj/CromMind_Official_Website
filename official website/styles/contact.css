@@ -1,0 +1,325 @@
+.contact-page {
+  --contact-line: rgba(7, 20, 38, 0.16);
+  --contact-muted: #40546a;
+}
+
+.contact-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.contact-main {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: start;
+  gap: clamp(2rem, 6vw, 5rem);
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.contact-intro {
+  padding-top: 0.75rem;
+}
+
+.contact-eyebrow {
+  margin: 0;
+  color: var(--brand-blue-deep);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-intro h1 {
+  max-width: 12ch;
+  margin: 1rem 0 1.1rem;
+  color: var(--brand-navy);
+  font-size: 3.45rem;
+  line-height: 1.04;
+}
+
+.contact-intro__summary {
+  max-width: 45ch;
+  margin: 0;
+  color: var(--contact-muted);
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+
+.contact-paths {
+  display: grid;
+  gap: 1.15rem;
+  margin-top: 2.5rem;
+}
+
+.contact-path {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.2rem 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--contact-line);
+}
+
+.contact-path:last-child {
+  border-bottom: 1px solid var(--contact-line);
+}
+
+.contact-path:focus-visible,
+.contact-note a:focus-visible {
+  outline: 3px solid var(--brand-gold);
+  outline-offset: 4px;
+}
+
+.contact-path__label {
+  grid-column: 1 / -1;
+  color: var(--brand-blue-deep);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-path__title {
+  color: var(--brand-navy);
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.contact-path__action {
+  color: var(--brand-blue-deep);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.contact-path__action span {
+  display: inline-block;
+  transition: transform 160ms ease;
+}
+
+.contact-path:hover .contact-path__action span {
+  transform: translateX(0.2rem);
+}
+
+.contact-form-panel {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--contact-line);
+  border-radius: 0.45rem;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 42px rgba(11, 29, 51, 0.08);
+}
+
+.contact-form-panel__heading h2 {
+  margin: 0.55rem 0 0.35rem;
+  color: var(--brand-navy);
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.contact-form-panel__heading > p:last-child {
+  margin: 0;
+  color: var(--contact-muted);
+  font-size: 0.82rem;
+}
+
+.contact-form-panel__heading > p:last-child span,
+.contact-field label span {
+  color: var(--brand-blue-deep);
+  font-weight: 700;
+}
+
+.contact-form {
+  margin-top: 1.5rem;
+}
+
+.contact-form__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-field {
+  display: grid;
+  min-width: 0;
+  gap: 0.4rem;
+}
+
+.contact-field--wide {
+  grid-column: 1 / -1;
+}
+
+.contact-field label {
+  color: var(--brand-navy);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid rgba(7, 20, 38, 0.24);
+  border-radius: 0.25rem;
+  background: #ffffff;
+  color: var(--brand-navy);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.contact-field textarea {
+  min-height: 8.5rem;
+  resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #68788a;
+}
+
+.contact-field input:focus-visible,
+.contact-field select:focus-visible,
+.contact-field textarea:focus-visible {
+  outline: 3px solid rgba(0, 87, 184, 0.35);
+  outline-offset: 1px;
+  border-color: var(--brand-blue-deep);
+}
+
+.contact-form__submit {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--brand-blue-deep);
+  border-radius: 0.3rem;
+  background: var(--brand-blue-deep);
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.contact-form__submit:disabled {
+  border-color: #8194a8;
+  background: #8194a8;
+  cursor: not-allowed;
+}
+
+.contact-form__notice {
+  max-width: 52ch;
+  margin: 0.7rem 0 0;
+  color: var(--contact-muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.contact-note {
+  border-top: 1px solid var(--contact-line);
+  background: rgba(223, 243, 255, 0.58);
+}
+
+.contact-note__inner {
+  display: flex;
+  min-height: 5.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact-note__inner p {
+  margin: 0;
+  color: var(--contact-muted);
+  font-size: 0.9rem;
+}
+
+.contact-note__inner a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--brand-blue-deep);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.contact-note__inner a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+@media (max-width: 900px) {
+  .contact-main {
+    grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+    gap: 2rem;
+    padding-top: 3.5rem;
+  }
+
+  .contact-intro h1 {
+    font-size: 2.85rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-main {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding-top: 2.75rem;
+    padding-bottom: 3rem;
+  }
+
+  .contact-intro h1 {
+    max-width: 15ch;
+    font-size: 2.55rem;
+  }
+
+  .contact-paths {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+
+  .contact-path {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .contact-path__label {
+    grid-column: auto;
+  }
+
+  .contact-note__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-paths,
+  .contact-form__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-field--wide {
+    grid-column: auto;
+  }
+
+  .contact-form__submit {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-path__action span {
+    transition: none;
+  }
+}
