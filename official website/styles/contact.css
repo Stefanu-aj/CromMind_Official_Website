@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .contact-page {
   --contact-line: rgba(7, 20, 38, 0.16);
   --contact-muted: #40546a;

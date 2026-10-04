@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .services-page {
   --services-line: rgba(7, 20, 38, 0.15);
   --services-muted: #40546a;
